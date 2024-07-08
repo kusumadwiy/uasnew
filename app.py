@@ -7,7 +7,7 @@ with open('modellfixx.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Judul dan deskripsi aplikasi
-st.title('Prediksi Penjualan Masa Depan')
+st.title('Prediksi Penjualan Produk')
 st.write('Berdasarkan Data Historis')
 
 # Fungsi untuk melakukan prediksi total penjualan
