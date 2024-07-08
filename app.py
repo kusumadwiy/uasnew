@@ -7,8 +7,8 @@ with open('modellfixx.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Judul dan deskripsi aplikasi
-st.title('Prediksi Penjualan')
-st.write('Prediksi')
+st.title('Prediksi Penjualan Masa Depan')
+st.write('Berdasarkan Data Historis')
 
 # Fungsi untuk melakukan prediksi total penjualan
 def predict_sales(month,  year, gender, age, product_category, total_spending):
@@ -41,9 +41,9 @@ def predict_sales(month,  year, gender, age, product_category, total_spending):
 # Form input untuk prediksi
 with st.form(key='prediction_form'):
     month = st.number_input('Bulan', min_value=1, max_value=12, step=1)
-    year = st.number_input('Tahun', min_value=2000, max_value=2100, step=1) 
+    year = st.number_input('Tahun', min_value=2000, max_value=2200, step=1) 
     gender = st.selectbox('Gender', options=['Male', 'Female'])
-    age = st.number_input('Usia', min_value=0, max_value=100, step=5)
+    age = st.number_input('Usia', min_value=10, max_value=100, step=5)
     product_category = st.selectbox('Kategori Produk', options=['Beauty', 'Clothing', 'Electronics'])
     total_spending = st.number_input('Total Spending', min_value=100, max_value=5000, step=10)
     submit_button = st.form_submit_button(label='Predict')
