@@ -45,7 +45,7 @@ with st.form(key='prediction_form'):
     gender = st.selectbox('Gender', options=['Male', 'Female'])
     age = st.number_input('Usia', min_value=10, max_value=100, step=5)
     product_category = st.selectbox('Kategori Produk', options=['Beauty', 'Clothing', 'Electronics'])
-    total_spending = st.number_input('Total Spending', min_value=100, max_value=5000, step=10)
+    total_spending = st.number_input('Total Spending', min_value=5, max_value=5000, step=10)
     submit_button = st.form_submit_button(label='Predict')
 
 # Memproses prediksi ketika tombol submit ditekan
